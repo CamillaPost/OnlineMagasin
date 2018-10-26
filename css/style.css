@@ -1,0 +1,411 @@
+/*CSS document*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "open sans condensed", sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    width: 120px;
+    margin-top: 5px;
+    margin-left: 25px;
+    float: left;
+}
+
+nav {
+    border-bottom: 1px solid #EAEAEB;
+    text-align: right;
+    height: 60px;
+    line-height: 60px;
+}
+
+div.menu {
+    margin: 0 30px 0 0;
+    background-color: white;
+}
+
+.menu a {
+    text-decoration: none;
+    color: gray;
+    margin: 0 10px;
+    line-height: 60px;
+    clear: right;
+    background-color: white;
+}
+
+.menu a:hover {
+    color: black;
+}
+
+label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 60px;
+    display: none;
+    width: 26px;
+    float: right;
+}
+
+#toggle {
+    display: none;
+}
+
+#forside {
+    background-image: url(../images/seng.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 300px;
+    position: relative;
+}
+
+#forside h1 {
+    font-family: "Courier New", courier, monospace;
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    width: 100%;
+    font-size: 30px;
+    color: white;
+}
+
+#seneste {
+    font-family: "Sukhumvit Set", sans-serif;
+    margin-top: 40px;
+    text-align: center;
+    position: relative;
+}
+
+main {
+    padding-bottom: 100px;
+}
+
+main img {
+    width: 90%;
+    padding-top: 20px;
+    margin: 0 auto;
+    display: block;
+}
+
+main a{
+    text-decoration: none;
+    color: black;
+}
+
+main h3,
+h5 {
+    background-color: #EAEAEA;
+    text-align: center;
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+    display: block;
+    height: 90px;
+}
+
+/*footer*/
+.footer-billede {
+    background-image: url(../images/graa-space.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100px;
+    position: relative;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 40px 0;
+    background-color: #515151;
+}
+
+footer a {
+    margin: 16px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+/*Artikler*/
+#artikler{
+    position: relative;
+    margin: 0 20px 0 20px;
+}
+
+#artikler h1{
+    text-align: center;
+    line-height: 45px;
+    margin: 20px 10px 0 10px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#artikler p{
+    font-size: 14px;
+    line-height: 21px;
+    margin: 20px 15px 0 15px;
+}
+
+#artikler h4 {
+    margin: 15px auto 5px auto;
+    color: darkgray;
+    font-weight: 100;
+    font-size: 12px;
+    border-bottom: 1px solid darkgray;
+    border-top: 1px solid darkgray;
+    padding: 4px 0;
+    width: 90%;
+}
+
+span{
+    font-size: 28px;
+    font-family: "Source Serif Variable";
+}
+
+#artikler h2{
+    margin-top: 20px;
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.container3 img{
+    display: inline-block;
+}
+
+.container3 img{
+    width: 49%;
+    height: 25%;
+}
+
+/*Mobil*/
+@media only screen and (max-width:500px) {
+    label {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    .menu a {
+        display: block;
+        border-bottom: 1px solid #EAEAEB;
+        margin: 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .menu a:first-child {
+        border-top: 1px solid #EAEAEB;
+    }
+
+    #toggle:checked + .menu {
+        display: block;
+    }
+
+    #forside p {
+        display: none;
+    }
+
+    #forside > .midterknap {
+        display: none;
+    }
+
+    .button {
+        display: none;
+    }
+}
+
+/*Desktop*/
+@media only screen and (min-width:960px) {
+    /*Forside*/
+    .menu a {
+        margin: 20px;
+    }
+
+    .logo {
+        margin-left: 40px;
+    }
+
+    #forside {
+        background-image: url(../images/forside-billede.png);
+        height: 650px;
+    }
+
+    #forside h1 {
+        display: none;
+    }
+
+    #forside p {
+        font-family: "Courier New", courier, monospace;
+        font-size: 16px;
+        color: black;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 20px 20px 20px 20px;
+        line-height: 30px;
+        box-shadow: 2px 2px 5px grey;
+    }
+
+    #forside > div {
+        width: 25%;
+        position: absolute;
+        top: 15%;
+        right: 7%;
+    }
+
+    #forside > .midterknap {
+        text-align: center;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .button {
+        background-color: rgba(127, 127, 127, 0.5);
+        display: block;
+        width: 60%;
+        color: white;
+        padding: 10px 25px;
+        box-shadow: 0 0 3px grey;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 25px auto;
+        cursor: pointer;
+        box-shadow: 2px 2px 5px grey;
+    }
+
+    .button:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main .forsidebokse {
+        width: 24%;
+        height: 400px;
+        margin: 30px;
+    }
+
+    .obs {
+        height: 57%;
+    }
+    
+    main .forsidebokse:hover{
+        cursor: pointer;
+        opacity: 0.7;
+    }
+    
+    /*Artikel 1*/
+    #artikler h1{
+        font-weight: 600;
+        font-size: 45px;
+        line-height: 60px;
+        width: 75%;
+    }
+    
+    #artikler p{
+        width: 75%;
+    }
+    
+    #artikler h4{
+        margin-bottom: 5px;
+        width: 75%;
+    }
+    #artikler img {
+        width: 75%;
+        margin: 0 auto;
+        height: 100%;
+    }
+    .flexcontainer{
+        display: flex;
+        flex-direction: row;
+        width: 75%;
+    }
+    .plante{
+        width: 55%;
+        height: 70%;
+        margin-top: 30px;
+        margin-right: -40px;
+    }
+    .inspo{
+        width: 55%;
+        height: 130%;
+        margin-top: -8%;
+        margin-right: -40px;
+    }
+    
+    .arbejde{
+        height: 60%;
+        width: 75%;
+        margin-top: 2%;
+    }
+    
+    #artikler .paragraph{
+        margin-top: 4%;
+    }
+    
+    /*Artikel 2*/
+    .panorama{
+        height: 60%;
+    }
+    .vaerelse{
+        width: 80%;
+        height: 90%;
+    }
+    
+    /*Artikel 3*/
+    .detskaldubruge{
+        width: 60%;
+    }
+    .liste1{
+        margin-top: 6%;
+        margin-left: -5%;
+    }
+    .container3{
+        display: flex;
+        flex-direction: column;
+        width: 170%;
+        height: 40%;
+    }
+    .flexco{
+        display: flex;
+        flex-direction: row;
+        width: 65%;
+    }
+    .liste2{
+        margin-top: 6%;
+    }
+    .flexcospeciel{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 65%;
+        margin-top: -9%;
+    }
+    #trin3 {
+        width: 97%;
+    }
+    #faerdig{
+        width: 75%;
+        height: 80%;
+    }
+    .boks{
+        text-align: center;
+    }
+}
+
+
